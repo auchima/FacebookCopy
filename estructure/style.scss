@@ -10,15 +10,12 @@ body {
   background-color: #f0f2f5;
 }
 
-//MAIN
-main {
-  height: 60vh;
-  max-width: fit-content;
-}
+
 
 //MIXIN
 @mixin sectionRight {
-  margin: 20px 0 20px 0;
+  margin-top: 20px;
+  margin-bottom: 20px; ;
 }
 @mixin sectionRightButton {
   padding: 10px;
@@ -49,7 +46,6 @@ main {
     border-radius: 15px;
     &__form {
       @include sectionRight();
-
     }
     &__title {
       &__firstbutton {
@@ -64,7 +60,7 @@ main {
         @include sectionRightButton();
         background-color: #00a400;
         color: $colorPrimaryWhite;
-        width: 40%;
+        width: 38%;
         font-size: 17px;
         font-weight: 500px;
       }
@@ -73,6 +69,32 @@ main {
       @include sectionRight();
       color: #1877f2;
       cursor: pointer;
+    }
+    &__span{
+    text-align: center;
+    }
+  }
+}
+.footer{
+  background-color: $colorPrimaryWhite;
+  max-height: 100vh;
+  &__ul{
+    display: grid;
+    grid-template-columns: repeat(13,1fr);
+    list-style: none;
+    justify-items: center;
+    margin: 0px;
+    padding: 5px;
+    &__li{
+      padding: 5px;
+      justify-items: center;
+      margin-top: 4px;;
+      color: #808080;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    &__paragraph{
+      font-size: 5px;
     }
   }
 }

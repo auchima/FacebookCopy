@@ -1,0 +1,44 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background-color: #F0F2F5;
+}
+
+main{
+  height: 60vh;
+  max-width: fit-content;
+}
+
+@mixin sectionRightForm {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.section{
+  display: flex;
+  &__left{
+    width: 40%;
+    margin: 160px auto;
+    padding: 30px 30px;
+    font-size: 20px;
+      & > img{
+      margin-bottom: 10px;
+      }
+}
+    &__right{
+      background-color: #ffffff;
+      width: 30%;
+      margin: auto;
+      padding: 10px;
+      text-align: center;
+      &__form{
+      @include sectionRightForm();
+      }
+    }
+  }
+  
+
+

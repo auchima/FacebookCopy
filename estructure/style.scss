@@ -1,44 +1,78 @@
-*{
+$colorPrimaryWhite: #ffffff;
+
+* {
   margin: 0px;
   padding: 0px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-body{
-  background-color: #F0F2F5;
+body {
+  background-color: #f0f2f5;
 }
 
-main{
+//MAIN
+main {
   height: 60vh;
   max-width: fit-content;
 }
 
-@mixin sectionRightForm {
-  margin-bottom: 20px;
-  margin-top: 20px;
+//MIXIN
+@mixin sectionRight {
+  margin: 20px 0 20px 0;
 }
-.section{
+@mixin sectionRightButton {
+  padding: 10px;
+  border-radius: 7px;
+  border-style: none;
+  font-weight: 500px;
+  cursor: pointer;
+}
+//MIXIN
+
+.section {
   display: flex;
-  &__left{
+  &__left {
     width: 40%;
     margin: 160px auto;
     padding: 30px 30px;
     font-size: 20px;
-      & > img{
+    & > img {
       margin-bottom: 10px;
-      }
-}
-    &__right{
-      background-color: #ffffff;
-      width: 30%;
-      margin: auto;
-      padding: 10px;
-      text-align: center;
-      &__form{
-      @include sectionRightForm();
-      }
     }
   }
-  
+  &__right {
+    background-color: $colorPrimaryWhite;
+    width: 40%;
+    margin: auto;
+    padding-bottom: 20px;
+    text-align: center;
+    border-radius: 15px;
+    &__form {
+      @include sectionRight();
 
-
+    }
+    &__title {
+      &__firstbutton {
+        @include sectionRightButton();
+        width: 96%;
+        background-color: #1877f2;
+        color: $colorPrimaryWhite;
+        font-size: 20px;
+        font-weight: 500px;
+      }
+      &__secondbutton {
+        @include sectionRightButton();
+        background-color: #00a400;
+        color: $colorPrimaryWhite;
+        width: 40%;
+        font-size: 17px;
+        font-weight: 500px;
+      }
+    }
+    &__paragraph {
+      @include sectionRight();
+      color: #1877f2;
+      cursor: pointer;
+    }
+  }
+}

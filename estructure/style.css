@@ -8,6 +8,13 @@ body {
   background-color: #f0f2f5;
 }
 
+main {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  height: 70vh;
+}
+
 .section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27,7 +34,7 @@ body {
 
 .section__right {
   background-color: #ffffff;
-  width: 40%;
+  width: 30%;
   margin: auto;
   padding-bottom: 20px;
   text-align: center;
@@ -78,17 +85,17 @@ body {
 
 .footer {
   background-color: #ffffff;
-  max-height: 100vh;
+  height: 30vh;
 }
 
 .footer__ul {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[13];
-      grid-template-columns: repeat(13, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 900px;
   list-style: none;
   justify-items: center;
-  margin: 0px;
+  margin: auto;
   padding: 5px;
 }
 

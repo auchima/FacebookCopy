@@ -1,4 +1,5 @@
 $colorPrimaryWhite: #ffffff;
+$colorPimaryGray:#808080;
 
 * {
   margin: 0px;
@@ -7,15 +8,19 @@ $colorPrimaryWhite: #ffffff;
 }
 
 body {
-  background-color: #f0f2f5;
+background-color: #f0f2f5;
 }
 
-
+@media (max-width: 2500px){
+main{
+  max-width: fit-content;
+  height: 90vh;
+}
 
 //MIXIN
 @mixin sectionRight {
-  margin-top: 20px;
-  margin-bottom: 20px; ;
+  margin-top: 25px;
+  margin-bottom: 30px; ;
 }
 @mixin sectionRightButton {
   padding: 10px;
@@ -29,21 +34,21 @@ body {
 .section {
   display: flex;
   &__left {
-    width: 40%;
+    width: 35%;
     margin: 160px auto;
     padding: 30px 30px;
     font-size: 20px;
     & > img {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
   }
   &__right {
     background-color: $colorPrimaryWhite;
-    width: 40%;
-    margin: auto;
-    padding-bottom: 20px;
+    width: 35%;
+    margin: 70px;
     text-align: center;
     border-radius: 15px;
+    box-shadow: 2px 1px 6px 7px lightgray ;
     &__form {
       @include sectionRight();
     }
@@ -60,7 +65,7 @@ body {
         @include sectionRightButton();
         background-color: #00a400;
         color: $colorPrimaryWhite;
-        width: 38%;
+        width: 43%;
         font-size: 17px;
         font-weight: 500px;
       }
@@ -71,30 +76,161 @@ body {
       cursor: pointer;
     }
     &__span{
-    text-align: center;
+      display: flex;
+      margin: 12px 0px 20px;
+      justify-content: center;
+      position:relative;
+      border: $colorPimaryGray;
+      border-style: solid;
+      border-collapse: separate;
+    }
+    &__paragraphBottom{
+      font-size: 19px;
     }
   }
 }
 .footer{
   background-color: $colorPrimaryWhite;
-  max-height: 100vh;
-  &__ul{
-    display: grid;
-    grid-template-columns: repeat(13,1fr);
-    list-style: none;
-    justify-items: center;
-    margin: 0px;
-    padding: 5px;
-    &__li{
+  height: 20vh;
+    &__ul{
+      display: grid;
+      grid-template-columns: repeat(12,1fr);
+      list-style: none;
+      justify-items:auto;
       padding: 5px;
-      justify-items: center;
-      margin-top: 4px;;
-      color: #808080;
-      font-size: 12px;
-      cursor: pointer;
-    }
-    &__paragraph{
-      font-size: 5px;
+      &__li{
+        padding: 10px;
+        color: $colorPimaryGray;
+        font-size: 11px;
+        cursor: pointer;
+      }
     }
   }
 }
+
+@media (max-width: 1130px){
+  main{
+    max-width: fit-content;
+    height: 105vh;
+  }
+  .section{
+    display: inline-block;
+    &__left{
+      margin: auto;
+      width: 50%;
+    }
+    &__right{
+      margin: auto;
+      padding: 40px;
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 895px){
+  main {
+    max-width: fit-content;
+    height: 105vh;
+  }
+  .section{
+    display: inline-block;
+    &__left{
+      margin: auto;
+      width: 50%;
+    }
+    &__right{
+      margin: auto;
+      padding: 40px;
+      width: 50%;
+    }
+  }
+  .footer {
+  height: 40vh;
+    &__ul{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      list-style: none;
+      justify-items:auto;
+      padding: 0px;
+    }
+  }
+}
+
+@media (max-width: 650px){
+  main{
+    max-width: fit-content;
+    height: 110vh;
+    font-size: 12px;
+  }
+  .section{
+    display: inline-block;
+    &__left{
+      margin: auto;
+      width: 50%;
+    }
+    &__right{
+      margin: auto;
+      padding: 40px;
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 590px){
+  main{
+    max-width: fit-content;
+    height: 115vh;
+  }
+  .section{
+    display: inline-block;
+    &__left{
+      margin: auto;
+      width: 50%;
+    }
+    &__right{
+      margin: auto;
+      padding: 40px;
+      width: 50%;
+    }
+  }
+  .footer {
+  height: 50vh;
+    &__ul{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      list-style: none;
+      justify-items:auto;
+      padding: 0px;
+    }
+  }
+}
+
+@media (max-width: 500px){
+  main{
+    max-width: fit-content;
+    height: 140vh;
+  }
+  .section{
+    display: inline-block;
+    &__left{
+      margin: auto;
+      width: 50%;
+    }
+    &__right{
+      margin: auto;
+      padding: 40px;
+      width: 50%;
+    }
+  }
+  .footer {
+  height: 60vh;
+    &__ul{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      list-style: none;
+      justify-items:auto;
+      padding: 0px;
+    }
+  }
+}
+
